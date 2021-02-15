@@ -26,7 +26,6 @@ class BottomNavigationAdapter(private val fm: FragmentManager) {
             })
             transaction.setMaxLifecycle(fragment, Lifecycle.State.CREATED)
             transaction.hide(fragment)
-            fragment.setMenuVisibility(false)
         }
         transaction.commitAllowingStateLoss()
     }
@@ -38,11 +37,9 @@ class BottomNavigationAdapter(private val fm: FragmentManager) {
                 if (tabId != selectedTabId) {
                     transaction.hide(fragment)
                     transaction.setMaxLifecycle(fragment, Lifecycle.State.STARTED)
-                    fragment.setMenuVisibility(false)
                 } else {
                     transaction.show(fragment)
                     transaction.setMaxLifecycle(fragment, Lifecycle.State.RESUMED)
-                    fragment.setMenuVisibility(true)
                 }
             }
         }
