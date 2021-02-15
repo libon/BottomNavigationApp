@@ -2,8 +2,10 @@ Sample project to reproduce fragment menu inflation regression
 ==============================================================
 
 The app currently functions as expected:
-* When you select the "Dashboard" tab, an emoji action bar icon appears
+* When you select the "Dashboard" tab, an emoji action bar icon appears:
+    -  <img src="dashboardtab.png" width="240">
 * When you select either the "Home" or "Notifications" tab, the action bar icon disappears
+    -  <img src="bottomnav.gif" width="240">
 
 Steps to reproduce the issue:
 * Upgrade the activity and fragment dependencies:
